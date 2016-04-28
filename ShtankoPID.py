@@ -34,7 +34,7 @@ class pidController:
 			self.measuredVar = ioGen.model(self.PID) # grabs measuredVar from random number generator. Replace this with DAQ readings for a real PID.
 			
 			self.iterations += 1
-			pidControl.after(self.dt*1000,self.cycle) # after command in tkinter calls this method after a certain amount of time
+			pidControl.after(self.dt*1000,self.cycle) # after command in tkinter calls this method after a certain amount of time. This was originally a while loop, but there is no easy way to multithread tkinter so it had to go.
 			
 #PRINT OUTPUT TO CONSOLE:
 			print('ITERATION: ', self.iterations)
