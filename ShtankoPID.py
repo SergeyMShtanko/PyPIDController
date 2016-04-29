@@ -79,7 +79,7 @@ class IOgenerator:
 		self.manipulatedVar = manipulatedVar
 		
 	def model(self,manipulatedVar):
-		# tank level simulation with the valve located on the bottom and one in stream above. Let's pretend the efflux rate is independent of the level of an arbitrarily large tank
+		# tank level simulation with the valve located on the bottom and one in stream above. Let's pretend the efflux rate is independent of the fluid height in an arbitrarily wide tank (normally the efflux would be proportional to the sqrt(fluidLevel)
 		# we need a non-inverse controller for this purpose
 		# disturbance: inlet pipe from process w/ lots of noise
 		# measured var: tank level
